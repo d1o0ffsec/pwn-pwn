@@ -1,0 +1,153 @@
+.quote__notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  max-width: 820px;
+  margin: 0 auto 2rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: var(--radius-sm);
+  background: rgba(56, 189, 248, 0.06);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.quote__notice svg {
+  flex-shrink: 0;
+  color: var(--accent);
+  margin-top: 2px;
+}
+
+.quote__table-wrap {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(13, 17, 26, 0.85);
+}
+
+.quote__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.quote__table th {
+  text-align: left;
+  padding: 1.1rem 1.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(56, 189, 248, 0.05);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.quote__table td {
+  padding: 1.15rem 1.3rem;
+  color: var(--text-muted);
+  border-bottom: 1px solid rgba(125, 211, 252, 0.08);
+  vertical-align: middle;
+}
+
+.quote__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.quote__table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.quote__table tbody tr:hover {
+  background: rgba(56, 189, 248, 0.04);
+}
+
+.quote__service {
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.quote__price {
+  color: var(--accent-light) !important;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.quote__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 1.8rem 2rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: linear-gradient(120deg, rgba(56, 189, 248, 0.08), rgba(13, 17, 26, 0.6));
+}
+
+.quote__footer h3 {
+  color: #fff;
+  font-size: 1.15rem;
+  margin-bottom: 0.3rem;
+}
+
+.quote__footer p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 760px) {
+  .quote__table thead {
+    display: none;
+  }
+
+  .quote__table,
+  .quote__table tbody,
+  .quote__table tr,
+  .quote__table td {
+    display: block;
+    width: 100%;
+  }
+
+  .quote__table tr {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .quote__table tr:last-child {
+    border-bottom: none;
+  }
+
+  .quote__table td {
+    border: none;
+    padding: 0.35rem 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    text-align: right;
+  }
+
+  .quote__table td::before {
+    content: attr(data-label);
+    flex-shrink: 0;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    text-align: left;
+  }
+
+  .quote__price {
+    white-space: normal;
+  }
+
+  .quote__footer {
+    padding: 1.5rem;
+  }
+}

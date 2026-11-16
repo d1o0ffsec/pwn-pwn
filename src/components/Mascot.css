@@ -1,0 +1,47 @@
+/* Animaciones "step" para mantener el espíritu pixel art (sin interpolación suave) */
+
+.mascot {
+  width: 100%;
+  height: auto;
+  shape-rendering: crispEdges;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 12px 0 rgba(0, 0, 0, 0.3))
+    drop-shadow(0 0 26px rgba(56, 189, 248, 0.25));
+  animation: mascot-hop 0.9s steps(1, end) infinite alternate;
+}
+
+.mascot__tentacle {
+  animation: mascot-wiggle 0.7s steps(1, end) infinite alternate;
+}
+
+.mascot__sparkle {
+  animation: mascot-twinkle 0.8s steps(2, end) infinite;
+}
+
+@keyframes mascot-hop {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes mascot-wiggle {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(20px);
+  }
+}
+
+@keyframes mascot-twinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+}
