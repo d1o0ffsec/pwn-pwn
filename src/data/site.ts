@@ -9,7 +9,7 @@ export const site = {
   phoneDisplay: '56 6142 6776',
   phoneHref: 'tel:+5661426776',
   linkedin: 'https://www.linkedin.com/in/diego-ch%C3%A1vez-offsec',
-  location: 'Chile · Remoto',
+  location: 'México · Remoto',
   nav: [
     { label: 'Inicio', href: '#inicio' },
     { label: 'Servicios', href: '#servicios' },
